@@ -22,7 +22,7 @@
             <key>bic</key>
             <dict>
                 <key>match</key>
-                <string>\b(?i:(AGRIPLPRXXX|AGRIFRPPXXX|BPKOPLPWXXX|CITIPLPXXXX|GENODEDDXXX))(\:|\b)</string>
+                <string>\b(?:(AGRIPLPR(XXX)?|AGRIFRPP(XXX)?|BPKOPLPW(XXX)?|CITIPLPX(XXX)?|GENODEDD(XXX)?))(\:|\b)</string>
                 <key>name</key>
                 <string>constant.language</string>
             </dict>
@@ -31,14 +31,14 @@
                 <key>match</key>
                 <string>^\:(.*?)\:</string>
                 <key>name</key>
-                <string>string.quoted.swiftmt</string>
+                <string>string.quoted.tag.swiftmt</string>
             </dict>
             <key>blocknum</key>
             <dict>
                 <key>match</key>
                 <string>\G(.*?)\:</string>
                 <key>name</key>
-                <string>string.quoted.swiftmt</string>
+                <string>string.quoted.blocknum.swiftmt</string>
             </dict>
             <key>msgseparator</key>
             <dict>
@@ -52,9 +52,9 @@
                 <key>begin</key>
                 <string>{</string>
                 <key>end</key>
-                <string>}</string>
+                <string>-?}</string>
                 <key>name</key>
-                <string>keyword.operator</string>
+                <string>keyword.operator.block</string>
                 <key>patterns</key>
                 <array>
                     <dict>
@@ -63,11 +63,11 @@
                     </dict>
                     <dict>
                         <key>include</key>
-                        <string>#blocknum</string>
+                        <string>#tag</string>
                     </dict>
                     <dict>
                         <key>include</key>
-                        <string>#tag</string>
+                        <string>#blocknum</string>
                     </dict>
                     <dict>
                         <key>include</key>
