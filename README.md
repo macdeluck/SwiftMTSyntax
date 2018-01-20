@@ -1,0 +1,1 @@
+Syntax highlighting for Swift Message Types

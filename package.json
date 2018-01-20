@@ -1,0 +1,36 @@
+{
+	"name": "swiftmt",
+	"displayName": "Swift MT",
+	"description": "Syntax highlighting for Swift Message Types",
+	"version": "0.1.2",
+	"publisher": "trolleyyy",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Languages"
+	],
+	"author": {
+		"name": "Maciej Dłuś",
+		"email": "maciejdlus@gmail.com"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "swiftmt",
+				"extensions": [
+					".swt"
+				],
+				"configuration": "./swiftmt.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "swiftmt",
+				"scopeName": "text.swiftmt",
+				"path": "./src/syntaxes/swiftmt.tmLanguage"
+			}
+		]
+	},
+	"icon": "swiftmt.png"
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>scopeName</key>
+        <string>text.swiftmt</string>
+        <key>fileTypes</key>
+        <array>
+            <string>swt</string>
+        </array>
+        <key>name</key>
+        <string>Swift Message Type</string>
+        <key>patterns</key>
+        <array>
+            <dict>
+                <key>match</key>
+                <string>\b(?i:(AGRIPLPRXXX|AGRIFRPPXXX|BPKOPLPWXXX|CITIPLPXXXX|GENODEDDXXX))(\:|\b)</string>
+                <key>name</key>
+                <string>constant.language</string>
+            </dict>
+            <dict>
+                <!-- Quoted strings with " -->
+                <key>match</key>
+                <string>^\:(.*?)\:</string>
+                <key>name</key>
+                <string>string.quoted</string>
+            </dict>
+            <dict>
+                <!-- Quoted strings with " -->
+                <key>match</key>
+                <string>\$</string>
+                <key>name</key>
+                <string>keyword.operator</string>
+            </dict>
+        </array>
+        <key>uuid</key>
+        <string>d77ed0d1-d11c-45a7-a207-29421872303f</string>
+    </dict>
+</plist>
