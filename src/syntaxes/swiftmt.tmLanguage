@@ -13,11 +13,20 @@
         <key>patterns</key>
         <array>
             <dict>
+                <key>include</key>
+                <string>#value</string>
+            </dict>
+        </array>
+        <key>repository</key>
+        <dict>
+            <key>bic</key>
+            <dict>
                 <key>match</key>
                 <string>\b(?i:(AGRIPLPRXXX|AGRIFRPPXXX|BPKOPLPWXXX|CITIPLPXXXX|GENODEDDXXX))(\:|\b)</string>
                 <key>name</key>
                 <string>constant.language</string>
             </dict>
+            <key>tag</key>
             <dict>
                 <!-- Quoted strings with " -->
                 <key>match</key>
@@ -25,6 +34,7 @@
                 <key>name</key>
                 <string>string.quoted</string>
             </dict>
+            <key>msgseparator</key>
             <dict>
                 <!-- Quoted strings with " -->
                 <key>match</key>
@@ -32,7 +42,25 @@
                 <key>name</key>
                 <string>keyword.operator</string>
             </dict>
-        </array>
+            <key>value</key>
+            <dict>
+                <key>patterns</key>
+                <array>
+                    <dict>
+                        <key>include</key>
+                        <string>#bic</string>
+                    </dict>
+                    <dict>
+                        <key>include</key>
+                        <string>#tag</string>
+                    </dict>
+                    <dict>
+                        <key>include</key>
+                        <string>#msgseparator</string>
+                    </dict>
+                </array>
+            </dict>
+        </dict>
         <key>uuid</key>
         <string>d77ed0d1-d11c-45a7-a207-29421872303f</string>
     </dict>
