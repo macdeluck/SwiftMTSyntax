@@ -27,8 +27,7 @@
                 <string>constant.language</string>
             </dict>
             <key>tag</key>
-            <dict>
-                <!-- Quoted strings with " -->
+            <dict>=                
                 <key>match</key>
                 <string>^\:(.*?)\:</string>
                 <key>name</key>
@@ -36,14 +35,19 @@
             </dict>
             <key>msgseparator</key>
             <dict>
-                <!-- Quoted strings with " -->
                 <key>match</key>
                 <string>\$</string>
                 <key>name</key>
                 <string>keyword.operator</string>
             </dict>
-            <key>value</key>
+            <key>block</key>
             <dict>
+                <key>begin</key>
+                <string>{</string>
+                <key>end</key>
+                <string>}</string>
+                <key>name</key>
+                <string>string.quoted</string>
                 <key>patterns</key>
                 <array>
                     <dict>
@@ -57,6 +61,24 @@
                     <dict>
                         <key>include</key>
                         <string>#msgseparator</string>
+                    </dict>
+                    <dict>
+                        <key>include</key>
+                        <string>#msgseparator</string>
+                    </dict>
+                    <dict>
+                        <key>include</key>
+                        <string>#block</string>
+                    </dict>
+                </array>
+            </dict>
+            <key>value</key>
+            <dict>
+                <key>patterns</key>
+                <array>
+                    <dict>
+                        <key>include</key>
+                        <string>#block</string>
                     </dict>
                 </array>
             </dict>
