@@ -27,18 +27,25 @@
                 <string>constant.language</string>
             </dict>
             <key>tag</key>
-            <dict>=                
+            <dict>
                 <key>match</key>
                 <string>^\:(.*?)\:</string>
                 <key>name</key>
-                <string>string.quoted</string>
+                <string>string.quoted.swiftmt</string>
+            </dict>
+            <key>blocknum</key>
+            <dict>
+                <key>match</key>
+                <string>\G(.*?)\:</string>
+                <key>name</key>
+                <string>string.quoted.swiftmt</string>
             </dict>
             <key>msgseparator</key>
             <dict>
                 <key>match</key>
                 <string>\$</string>
                 <key>name</key>
-                <string>keyword.operator</string>
+                <string>punctuation.separator.dolar.swiftmt</string>
             </dict>
             <key>block</key>
             <dict>
@@ -47,7 +54,7 @@
                 <key>end</key>
                 <string>}</string>
                 <key>name</key>
-                <string>string.quoted</string>
+                <string>keyword.operator</string>
                 <key>patterns</key>
                 <array>
                     <dict>
@@ -56,11 +63,11 @@
                     </dict>
                     <dict>
                         <key>include</key>
-                        <string>#tag</string>
+                        <string>#blocknum</string>
                     </dict>
                     <dict>
                         <key>include</key>
-                        <string>#msgseparator</string>
+                        <string>#tag</string>
                     </dict>
                     <dict>
                         <key>include</key>
